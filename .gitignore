@@ -1,3 +1,6 @@
 __pycache__/
 node_modules/
-/venv
+# Virtual Environment
+venv/
+.venv/  
+# 预防万一，也加上另一种常见的命名
