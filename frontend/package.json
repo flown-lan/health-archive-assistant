@@ -1,3 +1,19 @@
 {
-  "name": "health-archive-frontend"
+  "name": "health-archive-frontend",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "vite": "^5",
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
+  }
 }
