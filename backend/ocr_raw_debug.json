@@ -1,0 +1,7 @@
+{
+  "from_pil": null,
+  "from_path": null,
+  "errors": [
+    "get_ocr error: [Errno 2] No such file or directory: '/Users/lanzf/Documents/web/health-archive-assistant/backend/models/ch_PP-OCRv3_det_infer/inference.yml'"
+  ]
+}
