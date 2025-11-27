@@ -84,9 +84,10 @@ PaperHealth 采用 **「核心开源 + 可选增强功能」** 模式：
 
 ## 📜 许可证
 
-（你可以选择 MIT / Apache 2.0 / AGPL —— 我可以根据需求帮你挑选最佳的一种）
+本项目采用 **Apache 2.0 开源许可证** 发布。
+你可以自由地使用、修改、分发本项目，包括商业用途，但必须遵循许可证条款。
 
----
+完整的许可证内容请参见仓库中的 LICENSE 文件。
 
 ---
 
@@ -188,8 +189,3 @@ This project is licensed under the **Apache License 2.0**.
 You are free to use, modify, distribute, and build upon this project, including for commercial purposes, as long as you comply with the terms of the license.
 
 Please see the full license text in the LICENSE file.
-
-本项目采用 **Apache 2.0 开源许可证** 发布。
-你可以自由地使用、修改、分发本项目，包括商业用途，但必须遵循许可证条款。
-
-完整的许可证内容请参见仓库中的 LICENSE 文件。
