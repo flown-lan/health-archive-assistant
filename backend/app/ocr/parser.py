@@ -10,25 +10,28 @@ logging.basicConfig(level=logging.INFO)
 ocr = None
 
 def get_ocr():
-    """使用本地检测模型 + 本地识别模型"""
+    """使用轻量级移动端模型（显式指定模型名称）"""
     global ocr
     if ocr is None:
         base = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "models", "paddleocr"))
-        det_dir = os.path.join(base, "PP-OCRv5_server_det")  # 软链到 ch_PP-OCRv4_det_infer
-        rec_dir = os.path.join(base, "PP-OCRv5_server_rec")  # 刚复制的本地识别模型
+        det_dir = os.path.join(base, "ch_PP-OCRv4_det_mobile")
+        rec_dir = os.path.join(base, "ch_PP-OCRv4_rec_mobile")
+        
         logging.info(f"det_model_dir: {det_dir}, exists: {os.path.exists(det_dir)}")
         logging.info(f"rec_model_dir: {rec_dir}, exists: {os.path.exists(rec_dir)}")
-
+        
         ocr = PaddleOCR(
-            lang='ch',
+            text_detection_model_name='PP-OCRv4_mobile_det',
             text_detection_model_dir=det_dir,
+            text_recognition_model_name='PP-OCRv4_mobile_rec',
             text_recognition_model_dir=rec_dir,
             use_textline_orientation=False
         )
-        logging.info("PaddleOCR initialized (local det + local rec).")
+        logging.info("PaddleOCR initialized (mobile models).")
     return ocr
 
 def extract_text_and_info(image_path: str):
+    """本地模型 OCR + 文本结构化处理"""
     try:
         ocr_instance = get_ocr()
         start = time.time()
