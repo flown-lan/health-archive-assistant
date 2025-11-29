@@ -12,6 +12,7 @@ build/
 develop-eggs/
 dist/
 backend/uploads/
+models/paddle_ocr/
 eggs/
 .eggs/
 lib/
